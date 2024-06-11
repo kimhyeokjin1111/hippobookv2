@@ -1,20 +1,23 @@
 package com.example.hippobookproject.service.user;
 
 import com.example.hippobookproject.mapper.user.UserIdDuplicateMapper;
+import lombok.AllArgsConstructor;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
-public class UserIdDuplicateServiceImpl implements UserIdDuplicateService {
+@AllArgsConstructor
+public class UserIdDuplicateServiceImpl implements UserIdDuplicateService{
 
     @Autowired
-    private UserIdDuplicateMapper userIdDuplicateMapper;
+    UserIdDuplicateMapper userIdDuplicateMapper;
 
-    //아이디 중복체크 mapper 접근
     @Override
-    public int idCheck(String userLoginId) {
-        int cnt = userIdDuplicateMapper.idCheck(userLoginId);
-        System.out.println("cnt: " + cnt);
-        return cnt;
+    public boolean selectId(String userLoginId){
+        log.info("Service :: selectId...........");
+        return userIdDuplicateMapper.selectId(userLoginId);
     }
 }
