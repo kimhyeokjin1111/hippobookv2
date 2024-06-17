@@ -25,7 +25,7 @@ public class ProfilePhotoSchedule {
 
     private final MypageService mypageService;
 
-    @Value("C:/hippo_profile/")
+    @Value("${file.profile.dir}")
     private String fileDir;
 
     @Scheduled(cron = "* * 23 * * ?")
