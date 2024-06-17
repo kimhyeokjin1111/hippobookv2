@@ -3,7 +3,7 @@
 <mapper namespace="com.example.hippobookproject.mapper.user.UserIdDuplicateMapper">
     <select id="selectId" resultType="boolean">
         SELECT COUNT(*)
-        FROM HR.TBL_USER
+        FROM TBL_USER
         WHERE USER_LOGIN_ID = #{userLoginId}
     </select>
 </mapper>

@@ -7,7 +7,7 @@
     </insert>
 
     <insert id="insertBoardComment" parameterType="CommentWriteDto">
-        INSERT INTO HR.TBL_BOARD_COMMENT (BOARD_COMMENT_ID, BOARD_COMMENT_CONTENT, USER_ID, BOARD_ID)
+        INSERT INTO TBL_BOARD_COMMENT (BOARD_COMMENT_ID, BOARD_COMMENT_CONTENT, USER_ID, BOARD_ID)
         VALUES(SEQ_BOARD_COMMENT.nextval, #{commentContent}, #{userId}, #{postId})
     </insert>
 
