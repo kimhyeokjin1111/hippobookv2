@@ -9,7 +9,7 @@
     <title>Document</title>
   </head>
   <body>
-  <header class="header" th:replace="~{/fragment/header :: header}"></header>
+  <header class="header" th:replace="~{fragment/header :: header}"></header>
     <input type="hidden" class="book-info-hidden" th:data-bookid="${bookInfo.bookId}"
     th:data-uid="${session.userId}">
     <div class="main__outer_container">
