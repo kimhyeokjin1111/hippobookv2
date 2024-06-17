@@ -91,7 +91,7 @@ public class MessageController {
         model.addAttribute("msgDto",msgDto);
         log.info("msgDto={}",msgDto);
 
-        return "/letter/view";
+        return "letter/view";
     }
 
     @GetMapping("/letter/send")

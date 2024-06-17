@@ -26,7 +26,7 @@ public class MainPageController {
 
     @RequestMapping("/search")
     public String searchPage(){
-        return "/main/searchpage";
+        return "main/searchpage";
     }
 
     private final MainService mainService;
